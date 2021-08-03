@@ -32,6 +32,10 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+
+gem 'devise'
+
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -40,6 +44,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
