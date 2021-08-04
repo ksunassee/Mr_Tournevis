@@ -40,6 +40,9 @@
     </a>
     </div>
 </div>
-
-<%= link_to "Offer a tool", new_tool_path %>
-<%= link_to "Search a tool", tools_path %>
+<div>
+  <%= link_to "Offer a tool", new_tool_path, class:"btn btn-primary" %>
+</div>
+<div class="btn-search"> 
+  <%= link_to "Search a tool", tools_path, class:"btn btn-success" %>
+</div>
