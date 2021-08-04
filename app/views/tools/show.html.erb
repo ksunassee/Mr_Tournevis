@@ -4,9 +4,11 @@
 <h1> hello </h1>
 
  <p>
+<%= image_tag  "tool.jpg" %>
+ <h1>
     <strong> Name: </strong> 
     <%= @tool.name %> 
-  </p>
+  </h1>
 
   <p>
     <strong> Price: </strong> 
@@ -32,3 +34,21 @@
     <strong> availability: </strong> 
     <%= @tool.availability %> 
   </p>
+
+   <%= link_to "Back to tools", tools_path %> 
+
+  <button type="submit"  onClick="conf()"> Book this tool </button>
+
+
+ 
+<script type="text/javascript">
+function conf()
+{
+var con=confirm("Your tool is booked");
+}
+</script>
+
+
+
+
+
