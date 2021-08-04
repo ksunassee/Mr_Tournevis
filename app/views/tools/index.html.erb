@@ -1,4 +1,8 @@
-<h1> Tools </h1>
+<div class="container">
+  <div class="tools-title">
+    <h1> Tools List</h1>
+  </div>
+  
 <% @tools.each do |tool| %>
   <p>
     <strong> Name: </strong> 
@@ -29,5 +33,16 @@
     <strong> availability: </strong> 
     <%= tool.availability %> 
   </p>
+
+  <%= image_tag  "tool.jpg" %>
   
 <% end %>
+  
+
+</div>
+<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
