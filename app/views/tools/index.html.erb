@@ -1,48 +1,58 @@
 <div class="container">
   <div class="tools-title">
-    <h1> Tools List</h1>
+    <h1> Your Amazing tool</h1>
   </div>
-  
+<div class="card-product index-tools">
 <% @tools.each do |tool| %>
   <p>
-    <strong> Name: </strong> 
+
+    <div ">
+    <strong class="creatria"> Name: </strong> 
     <%= tool.name %> 
   </p>
 
+<div class="price">
   <p>
-    <strong> Price: </strong> 
+    <strong class="creatria"> Price: </strong> 
     <%= tool.price %> 
   </p>
+</div>
 
+<div class="quantity">
   <p>
-    <strong> Quantity: </strong> 
+    <strong class="creatria"> Quantity: </strong> 
     <%= tool.quantity %> 
   </p>
+</div>
 
+<div class="brand">
   <p>
-    <strong> brand: </strong> 
+    <strong class="creatria"> Brand: </strong> 
     <%= tool.brand %> 
   </p>
-
+</div>
+<div class="description">
   <p>
-    <strong> description: </strong> 
+    <strong class="creatria"> Description: </strong> 
     <%= tool.description %> 
   </p>
+</div>
 
+<div class="available">
   <p>
-    <strong> availability: </strong> 
+    <strong class="creatria"> Availability: </strong> 
     <%= tool.availability %> 
-  </p>
-
+  </p>  
+</div>
+</div>
+<div>
   <%= image_tag  "tool.jpg" %>
+</div>
   
 <% end %>
   
 
 </div>
-<body style="background-color:powderblue;">
+</div>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
 
-</body>
