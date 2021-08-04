@@ -1,30 +1,59 @@
 
- <p>
-    <strong> Name: </strong> 
-    <%= @tool.name %> 
-  </p>
+<div class="container"> 
 
-  <p>
-    <strong> Price: </strong> 
-    <%= @tool.price %> 
-  </p>
+  <div class="card-product show">
+  <%= image_tag  "tournevis_2"  %>
 
-  <p>
-    <strong> Quantity: </strong> 
-    <%= @tool.quantity %> 
-  </p>
+  <div class="card-product-infos"> 
+      <div>
+       <p>
+          <span class="Name"> Name: </span> 
+          <%= @tool.name %> 
+        </p>
+      </div>
 
-  <p>
-    <strong> brand: </strong> 
-    <%= @tool.brand %> 
-  </p>
+      <div> 
+        <p>
+          <strong> Price: </strong> 
+          <%= @tool.price %> 
+        </p>
+        </div>
 
-  <p>
-    <strong> description: </strong> 
-    <%= @tool.description %> 
-  </p>
+        <div>
+          <p><strong> Quantity: </strong> 
+          <%= @tool.quantity %> 
+        </p>
 
-  <p>
-    <strong> availability: </strong> 
-    <%= @tool.availability %> 
-  </p>
+         <div>
+        <p>
+          <strong> Brand: </strong> 
+          <%= @tool.brand %> 
+        </p>
+      </div> 
+
+      <div>
+        <p>
+          <strong> Description: </strong> 
+          <%= @tool.description %> 
+        </p>
+        </div>
+
+        <p>
+          <strong> Availability: </strong> 
+          <%= @tool.availability %> 
+        </p>
+    </div>
+    <button type="submit" class= "btn btn-primary" onClick="conf()"> Book this tool </button>
+  </div>
+</div>
+ <div>
+     <%= link_to "Back to tools", tools_path, class: "btn btn-primary"%> 
+  </div>
+<script type="text/javascript">
+function conf()
+{
+var con=confirm("Your tool is booked");
+}
+
+</script>
+

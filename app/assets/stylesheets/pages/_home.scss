@@ -1,3 +1,17 @@
+
+// Specific CSS for your home-page
+.tools-title {
+	font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    
+}
+
+
+.creatria {
+    font-family: 'Lobster', cursive;
+}
+
+
 img.clipped {
     width: 100%; /*Scales image to 150% width of parent container*/
     float: left; /*Floats image to left of container - clipping right hand side*/
@@ -6,8 +20,10 @@ img.clipped {
 .container {
     width: 50%; /*Use this to control width of the parent container, hence the image*/
     overflow: hidden;
+    
 }
 
 body {
     background-color: #d1b4a9;
     }
+
