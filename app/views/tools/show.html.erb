@@ -1,53 +1,39 @@
 
 <div class="container"> 
-
-  <div class="card-product show">
-  <%= image_tag  "tournevis_2"  %>
-
-  <div class="card-product-infos"> 
-      <div>
-       <p>
-          <span class="Name"> Name: </span> 
-          <%= @tool.name %> 
-        </p>
-      </div>
-
-      <div> 
+  <div class="tools-title">
+    <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
+  </div>
+  
+  <%= image_tag  "tournevis_2", height: "200", width: "300"  %>
         <p>
-          <strong> Price: </strong> 
-          <%= @tool.price %> 
-        </p>
-        </div>
-
-        <div>
-          <p><strong> Quantity: </strong> 
-          <%= @tool.quantity %> 
-        </p>
-
-         <div>
-        <p>
-          <strong> Brand: </strong> 
+          <%= image_tag "brand.png", height: "50", width: "50" %>
           <%= @tool.brand %> 
         </p>
-      </div> 
-
-      <div>
         <p>
-          <strong> Description: </strong> 
+          <%= image_tag "description.png", height: "50", width: "50" %>
           <%= @tool.description %> 
         </p>
-        </div>
-
         <p>
-          <strong> Availability : </strong> 
-          <%= @tool.availability %> 
+          <%= image_tag "boxes.png", height: "50", width: "50" %>
+          <%= @tool.quantity %> 
         </p>
-    </div>
-  </div>
+        <p>
+          <%= image_tag "best-price.png", height: "50", width: "50" %>
+          <%= @tool.price %> 
+        </p>
+        <p>
+          <%= image_tag "availability.png", height: "50", width: "50" %>
+          <% if @tool.availability == false %> 
+            <%= "Not Available" %>
+          <% else %>
+            <%= "Available" %>
+          <% end %>
+        </p>
 </div>
  <div>
      <%= link_to "Back to tools", tools_path, class: "btn btn-primary"%> 
      <%= link_to "Book this tool", new_tool_reservation_path(@tool.id) %>
   </div>
+
 
 
