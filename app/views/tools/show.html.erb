@@ -43,17 +43,11 @@
           <%= @tool.availability %> 
         </p>
     </div>
-    <button type="submit" class= "btn btn-primary" onClick="conf()"> Book this tool </button>
   </div>
 </div>
  <div>
      <%= link_to "Back to tools", tools_path, class: "btn btn-primary"%> 
+     <%= link_to "Book this tool", new_tool_reservation_path(@tool.id) %>
   </div>
-<script type="text/javascript">
-function conf()
-{
-var con=confirm("Your tool is booked ");
-}
 
-</script>
 
