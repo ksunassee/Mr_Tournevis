@@ -1,60 +1,51 @@
 <div class="container"> 
+<div class="tools-title">
+  <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
+</div>
+  
+  <%= image_tag  "tournevis_2", height: "200", width: "300"  %>
 
-  <div class="card-product show">
-  <%= image_tag  "tournevis_2"  %>
 
-  <div class="card-product-infos"> 
-      <div>
-       <p>
-          <span class="Name"> Name: </span> 
-          <%= @tool.name %> 
+
+
+
+        <p >
+          <%= image_tag "brand.png", height: "50", width: "50" %>
+          <%= @tool.brand %> 
         </p>
-      </div>
 
-      <div> 
         <p>
-          <strong> Price: </strong> 
-          <%= @tool.price %> 
+          <%= image_tag "description.png", height: "50", width: "50" %>
+          <%= @tool.description %> 
         </p>
-        </div>
-
-        <div>
-          <p><strong> Quantity: </strong> 
+     
+          <%= image_tag "boxes.png", height: "50", width: "50" %>
           <%= @tool.quantity %> 
         </p>
 
-         <div>
+ 
         <p>
-          <strong> Brand: </strong> 
-          <%= @tool.brand %> 
+          <%= image_tag "best-price.png", height: "50", width: "50" %>
+          <%= @tool.price %> 
         </p>
-      </div> 
+     
+        <p>
+          <%= image_tag "availability.png", height: "50", width: "50" %>
+          <% if @tool.availability == false %> 
+            <%= "Not Available" %>
+          <% else %>
+            <%= "Available" %>
+          <% end %>
+        </p>
+     <%= link_to "Back to tools", tools_path, class: "btn btn-outline-secondary" %> 
+    <button type="submit" class= "btn btn-outline-primary" onClick="conf()"> Book this tool </button>
 
-      <div>
-        <p>
-          <strong> Description: </strong> 
-          <%= @tool.description %> 
-        </p>
-        </div>
-
-        <p>
-          <strong> Availability : </strong> 
-          <%= @tool.availability %> 
-        </p>
-    </div>
-    <button type="submit" class= "btn btn-primary" onClick="conf()"> Book this tool </button>
-  </div>
 </div>
- <div>
-     <%= link_to "Back to tools", tools_path, class: "btn btn-primary"%> 
-  </div>
-<script type="text/javascript">
-function conf()
-{
-var con=confirm("Your tool is booked ");
-}
 
-</script>
+
+
+
+
 
 
 

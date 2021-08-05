@@ -16,12 +16,9 @@ img.clipped {
     float: left; /*Floats image to left of container - clipping right hand side*/
     float: right; /*Floats image to right of container - clipping left hand side*/
 }
-.container {
-    width: 50%; /*Use this to control width of the parent container, hence the image*/
-    overflow: hidden;
-}
+
 
 body {
     background-color: #d1b4a9;
     }
-
+    

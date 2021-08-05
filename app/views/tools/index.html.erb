@@ -1,59 +1,24 @@
 <div class="container">
   <div class="tools-title">
-    <h1> Your Amazing tool</h1>
+      <h1> <%= image_tag "tools-icon-1.png", height: "50", width: "50" %> The Renting Tools!</h1> 
   </div>
-  <div class= "cards">
-    
-<div class="card-product index-tools">
-<% @tools.each do |tool| %>
-  <p>
+  <div class="cards">
 
-    <div>
-    <strong class="creatria"> Name: </strong> 
-    <%= tool.name %> 
-  </p>
-
-<div class="price">
-  <p>
-    <strong class="creatria"> Price: </strong> 
-    <%= tool.price %> 
-  </p>
-</div>
-
-<div class="quantity">
-  <p>
-    <strong class="creatria"> Quantity: </strong> 
-    <%= tool.quantity %> 
-  </p>
-</div>
-
-<div class="brand">
-  <p>
-    <strong class="creatria"> Brand: </strong> 
-    <%= tool.brand %> 
-  </p>
-</div>
-<div class="description">
-  <p>
-    <strong class="creatria"> Description: </strong> 
-    <%= tool.description %> 
-  </p>
-</div>
-
-<div class="available">
-  <p>
-    <strong class="creatria"> Availability: </strong> 
-    <%= tool.availability %> 
-  </p>  
-</div>
-</div>
-<div>
-  <%= image_tag  "tool.jpg" %>
-</div>
-  
-<% end %>
+    <% @tools.each do |tool| %>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <%= image_tag "echelle_1.jpeg", class:"image-product" %>
+          </div>
+          <div class="flip-card-back">
+            <h2><%= tool.name %> </h2>
+            <p class= "text-blue"><%= image_tag "tools-icon-1.png", height: "30", width: "30" %> <strong>TOOLS:</strong> <%= tool.description %></p>
+            <p class= "text-blue"><%= image_tag "brand.png", height: "30", width: "30" %> <strong>BRAND:</strong> <%= tool.brand %></p>
+            <p class= "text-blue"><%= image_tag "best-price.png", height: "30", width: "30" %> <strong>PRICE in Rs:</strong> <%= tool.price %></p>
+            <%= link_to "SEE MORE", tool_path(tool), class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
-</div>
-
-
