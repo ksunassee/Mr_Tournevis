@@ -1,5 +1,7 @@
 
 // Specific CSS for your home-page
+
+
 .tools-title {
 	font-family: 'EB Garamond', serif;
     font-size: 30px; 
@@ -19,4 +21,51 @@ img.clipped {
 
 body {
     background-color: #d1b4a9;
+ }
+
+.display-4 {
+    background-color: #d1b4a9;
+}
+
+.jumbotron {
+    background-color: #d1b4a9;
+}
+
+.card-group>.card {
+    flex: 0 1 25% !important;
+    border-radius: calc(.25rem - 1px) !important;
+  }
+  
+  
+  /* span 3 "columns"
+  */
+  
+  .x3 {
+    min-width: 75% !important;
+  }
+  
+  
+  /* span 2 "columns"
+  */
+  
+  .x2 {
+    min-width: 50% !important;
+  }
+  .card-img-top {
+    max-height:160px; 
+    min-height:160px;
+    object-fit: cover
+}
+.form-control {
+    border-radius: 0 !important
+}
+@media(min-width: 768px) {
+    section {
+        padding-top: 13.3125rem;
     }
+
+    section {
+        padding-bottom: 7.5rem;
+    }
+}
+    
