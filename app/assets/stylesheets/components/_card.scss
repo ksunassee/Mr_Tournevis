@@ -1,17 +1,19 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  // height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
 }
 
-.card-product img {
+ 
+.image-product{
   height: 100%;
-  width: 225px;
+  width: 100%;
   object-fit: cover;
-}
+  }
+
 
 .card-product h2 {
   font-size: 16px;
@@ -37,6 +39,7 @@
     height: 180px;
 }
 
+
 .index-tools {
    padding: 80px;
 }
@@ -49,3 +52,13 @@
   margin-top: 400px;
   position: relative;
 }
+
+// .index-tools {
+//    padding: 80px;
+// }
+
+.text-blue {
+  color: #6a040f;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
