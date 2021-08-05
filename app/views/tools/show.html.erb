@@ -1,34 +1,26 @@
+
 <div class="container"> 
-<div class="tools-title">
-  <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
-</div>
+  <div class="tools-title">
+    <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
+  </div>
   
   <%= image_tag  "tournevis_2", height: "200", width: "300"  %>
-
-
-
-
-
-        <p >
+        <p>
           <%= image_tag "brand.png", height: "50", width: "50" %>
           <%= @tool.brand %> 
         </p>
-
         <p>
           <%= image_tag "description.png", height: "50", width: "50" %>
           <%= @tool.description %> 
         </p>
-     
+        <p>
           <%= image_tag "boxes.png", height: "50", width: "50" %>
           <%= @tool.quantity %> 
         </p>
-
- 
         <p>
           <%= image_tag "best-price.png", height: "50", width: "50" %>
           <%= @tool.price %> 
         </p>
-     
         <p>
           <%= image_tag "availability.png", height: "50", width: "50" %>
           <% if @tool.availability == false %> 
@@ -37,16 +29,11 @@
             <%= "Available" %>
           <% end %>
         </p>
-     <%= link_to "Back to tools", tools_path, class: "btn btn-outline-secondary" %> 
-    <button type="submit" class= "btn btn-outline-primary" onClick="conf()"> Book this tool </button>
-
 </div>
-
-
-
-
-
-
+ <div>
+     <%= link_to "Back to tools", tools_path, class: "btn btn-primary"%> 
+     <%= link_to "Book this tool", new_tool_reservation_path(@tool.id) %>
+  </div>
 
 
 
