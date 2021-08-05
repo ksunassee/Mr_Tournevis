@@ -1,5 +1,7 @@
 
 // Specific CSS for your home-page
+
+
 .tools-title {
 	font-family: 'EB Garamond', serif;
     font-size: 30px; 
@@ -56,3 +58,20 @@ body {
   .x2 {
     min-width: 50% !important;
   }
+  .card-img-top {
+    max-height:160px; 
+    min-height:160px;
+    object-fit: cover
+}
+.form-control {
+    border-radius: 0 !important
+}
+@media(min-width: 768px) {
+    section {
+        padding-top: 13.3125rem;
+    }
+
+    section {
+        padding-bottom: 7.5rem;
+    }
+}
