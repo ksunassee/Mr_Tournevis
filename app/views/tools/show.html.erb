@@ -1,39 +1,60 @@
+<div>
+        <%= image_tag "workshop.jpg", class: "bg-cover", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), ; position: absolute; top: 0; bottom: 0; left: 0;right: 0; width: 100%; background-repeat: no-repeat;background-position: 50%;background-size: cover;" %>
+    </div>
 
-<div class="container"> 
-  <div class="tools-title">
-    <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
+<div class="container card col-sm-9 mt-5 mb-5"> 
+<div class="text-center align ">
+    <div class="tools-title">
+    
+      <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
+    </div>
+    <div class="align-center mt-5 mb-5 ">
+      <%= image_tag  "tournevis_2.jpg", height: "250", width: "400"  %>
+    </div>
+      <div class="col">
+          <p class="row align-self-center">
+            <%= image_tag "brand.png" , height: "50", width: "50" %>
+            <%= @tool.brand %> 
+          </p>
+          <p class="row align-self-center">
+            <%= image_tag "description.png", height: "50", width: "50" %>
+            <%= @tool.description %> 
+          </p>
+          <p class="row align-self-center">
+            <%= image_tag "boxes.png", height: "50", width: "50" %>
+            <%= @tool.quantity %> 
+          </p>
+          <p class="row align-self-center">
+            <%= image_tag "best-price.png", height: "50", width: "50" %>
+            <%= @tool.price %> 
+          </p>
+        
+          <p class="row align-self-center">
+            <%= image_tag "availability.png", height: "50", width: "50" %>
+            <% if @tool.availability == false %> 
+              <%= "Not Available" %>
+            <% else %>
+              <%= "Available" %>
+            <% end %>
+          </p>
+        </div>
+      <%= link_to "Book this tool", new_tool_reservation_path(@tool.id),class: "btn btn-danger btn-block" %>
+      <%= link_to "Back to tools", tools_path, class: "btn btn-danger btn-block"%> 
+    </div> 
+    </div>
   </div>
-  
-  <%= image_tag  "tournevis_2", height: "200", width: "300"  %>
-        <p>
-          <%= image_tag "brand.png", height: "50", width: "50" %>
-          <%= @tool.brand %> 
-        </p>
-        <p>
-          <%= image_tag "description.png", height: "50", width: "50" %>
-          <%= @tool.description %> 
-        </p>
-        <p>
-          <%= image_tag "boxes.png", height: "50", width: "50" %>
-          <%= @tool.quantity %> 
-        </p>
-        <p>
-          <%= image_tag "best-price.png", height: "50", width: "50" %>
-          <%= @tool.price %> 
-        </p>
-        <p>
-          <%= image_tag "availability.png", height: "50", width: "50" %>
-          <% if @tool.availability == false %> 
-            <%= "Not Available" %>
-          <% else %>
-            <%= "Available" %>
-          <% end %>
-        </p>
 </div>
- <div>
-     <%= link_to "Back to tools", tools_path, class: "btn btn-primary"%> 
-     <%= link_to "Book this tool", new_tool_reservation_path(@tool.id) %>
-  </div>
 
 
-
+<div class="card my-4 p-2 small border-0">
+    <div class="row no-gutters">
+        <div class="col-md-7 d-flex align-items-center">
+            <p class="my-0 px-3">Earn up to <strong>$6000/month</strong> Become a member</p>
+        </div>
+        <div class="col-md-5 border-left border-secondary">
+            <div class="card-body">
+                <%= link_to "lend your tools", new_tool_path, class:"card-text"%>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,27 @@
-<div class="container">
-	<h1>Create a new tool</h1>
-	<%= render 'form', tool: @tool %>
+<div>
+        <%= image_tag "workshop.jpg", class: "bg-cover", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), ; position: absolute; top: 0; bottom: 0; left: 0;right: 0; width: 100%; background-repeat: no-repeat;background-position: 50%;background-size: cover;" %>
+    </div>
+	<div class="container card col-sm-8 mt-5 mb-5">
+
+		<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h2 class="display-4">Create a new tool</h2>
+		
+		</div class= "container mb-5">
+			<%= render 'form', tool: @tool %>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="card my-4 p-2 small border-0 ">
+    <div class="row no-gutters">
+        <div class="col-md-7 d-flex align-items-center">
+            <p class="my-0 px-3">Earn up to <strong>$6000/month</strong> Become a member</p>
+        </div>
+        <div class="col-md-5 border-left border-secondary">
+            <div class="card-body">
+                <%= link_to "lend your tools", new_tool_path, class:"card-text"%>
+            </div>
+        </div>
+    </div>
 </div>
