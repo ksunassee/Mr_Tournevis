@@ -9,27 +9,27 @@
       <h1><%= image_tag "repair-tools.png", height: "50", width: "50" %><u><%= @tool.name %></u></h1>
     </div>
     <div class="align-center mt-5 mb-5 ">
-      <%= image_tag  "tournevis_2.jpg", height: "250", width: "400"  %>
+      <%= image_tag  "tools2.jpg", height: "300"  %>
     </div>
       <div class="col">
-          <p class="row align-self-center">
+          <p class="row tool-show align-self-center">
             <%= image_tag "brand.png" , height: "50", width: "50" %>
             <%= @tool.brand %> 
           </p>
-          <p class="row align-self-center">
+          <p class="row tool-show align-self-center">
             <%= image_tag "description.png", height: "50", width: "50" %>
             <%= @tool.description %> 
           </p>
-          <p class="row align-self-center">
+          <p class="row tool-show align-self-center">
             <%= image_tag "boxes.png", height: "50", width: "50" %>
             <%= @tool.quantity %> 
           </p>
-          <p class="row align-self-center">
+          <p class="row tool-show align-self-center">
             <%= image_tag "best-price.png", height: "50", width: "50" %>
             <%= @tool.price %> 
           </p>
         
-          <p class="row align-self-center">
+          <p class="row tool-show align-self-center">
             <%= image_tag "availability.png", height: "50", width: "50" %>
             <% if @tool.availability == false %> 
               <%= "Not Available" %>
@@ -49,7 +49,7 @@
 <div class="card my-4 p-2 small border-0">
     <div class="row no-gutters">
         <div class="col-md-7 d-flex align-items-center">
-            <p class="my-0 px-3">Earn up to <strong>$6000/month</strong> Become a member</p>
+            <p class="my-0 px-3">Earn up to <strong>Rs6000/month</strong> Become a member</p>
         </div>
         <div class="col-md-5 border-left border-secondary">
             <div class="card-body">
