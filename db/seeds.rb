@@ -15,6 +15,11 @@
     tools4 = Tool.create(name:'Grinder', price:500, quantity: 4, brand:'Mikachi', description: 'To cut woods', availability: true, user_id: users1.id)
     tools5 = Tool.create(name:'GrassHopper', price:250, quantity: 03, brand:'Mikano', description: 'Small fixes', availability: true, user_id: users2.id)
     tools6 = Tool.create(name:'Loosewires', price:8, quantity: 33, brand:'Watery', description: 'To stop flooding', availability: true, user_id: users3.id)
+    tools7 = Tool.create(name:'Ladder', price:1000, quantity: 3, brand:'Lorus', description: 'Available in all sizes and different colors', availability: false, user_id: users1.id)
+    tools8 = Tool.create(name:'Breaker', price:56, quantity: 300, brand:'Mailas', description: 'Plugins', availability: true, user_id: users2.id)
+    tools9 = Tool.create(name:'Hosewater', price:300, quantity: 150, brand:'Bricole', description: 'Water purposes', availability: true, user_id: users3.id)
+    tools10 = Tool.create(name:'Bulbs', price:550, quantity: 643, brand:'Orange', description: 'Bring light to your life', availability: true, user_id: users1.id)
+
 
 
 puts "finished"
