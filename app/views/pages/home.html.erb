@@ -2,13 +2,13 @@
 <div class="container-fluid" style="height:70vh;">
 
     <div>
-        <%= image_tag "workshop.jpg", class: "bg-cover", style: "background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), ; position: absolute; top: 0; bottom: 0; left: 0;right: 0; width: 100%; background-repeat: no-repeat;background-position: 50%;background-size: cover;" %>
+        <%= image_tag "workshop.jpg", class: "bg-cover", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), ; position: absolute; top: 0; bottom: 0; left: 0;right: 0; width: 100%; background-repeat: no-repeat;background-position: 50%;background-size: cover;" %>
     </div>
     <div class="col-sm-5">
         <div class="card-banner">
             <div class="card-body">
                 <h5 class="card-title">Welcome to Mr Tournevis</h5>
-                <h1 class="h3">Rent the right equipment for a better worksite</h1>
+                <h2 class="h3">Rent the right equipment for a better worksite</h2>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <%= link_to "Offer a tool", new_tool_path, class:"btn btn-danger btn-block"%>
                 <%= link_to "Search a tool", tools_path,class:"btn btn-danger btn-block" %>
@@ -60,8 +60,9 @@
         </div>
         <div class="col-md-5 border-left border-secondary">
             <div class="card-body">
-                <p class="card-text">lend your tools <span>&gt;</span></p>
+                <%= link_to "lend your tools", new_tool_path, class:"card-text"%>
             </div>
         </div>
     </div>
 </div>
+ 
