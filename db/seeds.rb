@@ -20,7 +20,7 @@
     tools8 = Tool.create(name:'Breaker', price:56, quantity: 300, brand:'Mailas', description: 'Plugins', availability: true, user_id: users4.id)
     tools9 = Tool.create(name:'Hosewater', price:300, quantity: 150, brand:'Bricole', description: 'Water purposes', availability: true, user_id: users4.id)
     tools10 = Tool.create(name:'Bulbs', price:550, quantity: 643, brand:'Orange', description: 'Bring light to your life', availability: true, user_id: users4.id)
-    tools10 = Tool.create(name:'Driller', price:1000, quantity: 1, brand:'Orange', description: 'Driller w', availability: true, user_id: users4.id)
+    tools10 = Tool.create(name:'Driller', price:1000, quantity: 1, brand:'PGK', description: 'Driller with high speed', availability: true, user_id: users4.id)
 
 
 
