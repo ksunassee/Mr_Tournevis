@@ -1,15 +1,18 @@
-<h1> Your reservation </h1>
- 
-<% @reservations.each do |reservation| %>
-  <p>
-    <strong> Start-Date: </strong> 
-    <%= reservation.name %> 
-  </p>
+<div class="container">
 
-  <p>
-    <strong> Return-Date </strong> 
-    <%= reservation.price %> 
-  </p>
-<% end %>
+  <h1> Book your tools! </h1>
 
-<%= link_to "Back to reservations", reservations_path, class: "btn btn-primary"%> 
+  <% @reservations.each do |reservation| %>
+    <p>
+      <strong> Start-Date: </strong> 
+      <%= reservation.name %> 
+    </p>
+
+    <p>
+      <strong> Return-Date </strong> 
+      <%= reservation.price %> 
+    </p>
+  <% end %>
+
+  <%= link_to "Back to reservations", reservations_path, class: "btn btn-primary"%> 
+</div>

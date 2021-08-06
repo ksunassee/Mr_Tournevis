@@ -1,12 +1,17 @@
+<h1 class="reservation-title">Your Reservations </h1>
+<div class="container card col-sm-9 mt-5 mb-5 d-flex flex-row">
+    <div class= "reservation-date">
+      <% @reservations.each do |reservation| %>
+        <p>
+          <%= image_tag "hourglass-start.png", height: "50", width: "50" %><strong> Start-Date: </strong> 
+          <%= reservation.start_date %> 
+          <%= image_tag "hourglass-finish.png", height: "50", width: "50" %><strong> Return-Date: </strong> 
+          <%= reservation.return_date %> 
+        </p>
+      <% end %>
+    </div>
+    <div class= "reservation-date">
+      <%= image_tag "tools-box.gif", width:"400", height:"400"%>
+    </div>
+</div>
 
-<h1> Reservations </h1>
- 
-<% @reservations.each do |reservation| %>
-  <p>
-    <strong> Start-Date: </strong> 
-    <%= reservation.start_date %> 
-    
-    <strong> Return-Date </strong> 
-    <%= reservation.return_date %> 
-  </p>
-<% end %>
