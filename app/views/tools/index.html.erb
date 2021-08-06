@@ -1,24 +1,34 @@
-<div class="container">
-  <div class="tools-title">
-      <h1> <%= image_tag "tools-icon-1.png", height: "50", width: "50" %> The Renting Tools!</h1> 
-  </div>
-  <div class="cards">
+<div>
+        <%= image_tag "workshop.jpg", class: "bg-cover", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), ; position: absolute; top: 0; bottom: 0; left: 0;right: 0; width: 100%; background-repeat: no-repeat;background-position: 50%;background-size: cover;" %>
+    </div>
 
-    <% @tools.each do |tool| %>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <%= image_tag "echelle_1.jpeg", class:"image-product" %>
+<div class="container card col-sm-9 mt-5 mb-5">
+    
+    <div class="container mt-5">
+    <div class="tools-title mb-5">
+        <h1> <%= image_tag "tools-icon-1.png", height: "50", width: "50" %> </h1> 
+        <h2 class="display-4">Tools Available</h2>
+    </div>
+    <div class="cards">
+
+        <% @tools.each do |tool| %>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <%= image_tag "echelle.jpg", class:"image-product" %>
+              </div>
+              
+              <div class="flip-card-back">
+                <h2><%= tool.name %> </h2>
+                <p class= "text-blue"><%= image_tag "tools-icon-1.png", height: "30", width: "30" %> <strong>TOOLS:</strong> <%= tool.description %></p>
+                <p class= "text-blue"><%= image_tag "brand.png", height: "30", width: "30" %> <strong>BRAND:</strong> <%= tool.brand %></p>
+                <p class= "text-blue"><%= image_tag "best-price.png", height: "30", width: "30" %> <strong>PRICE in Rs:</strong> <%= tool.price %></p>
+                <%= link_to "SEE MORE", tool_path(tool), class:"btn btn-danger btn-block" %>
+              </div>
+            </div>
           </div>
-          <div class="flip-card-back">
-            <h2><%= tool.name %> </h2>
-            <p class= "text-blue"><%= image_tag "tools-icon-1.png", height: "30", width: "30" %> <strong>TOOLS:</strong> <%= tool.description %></p>
-            <p class= "text-blue"><%= image_tag "brand.png", height: "30", width: "30" %> <strong>BRAND:</strong> <%= tool.brand %></p>
-            <p class= "text-blue"><%= image_tag "best-price.png", height: "30", width: "30" %> <strong>PRICE in Rs:</strong> <%= tool.price %></p>
-            <%= link_to "SEE MORE", tool_path(tool), class:"btn btn-primary" %>
-          </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
   </div>
-</div>
+
+
